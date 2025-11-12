@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import '../styles/theme.css';
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+/* Gradient animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background: linear-gradient(120deg, #0B0D12, #141824, #CB7AE1, #FF8833);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Soft float animation for headshot */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Reusable card styles */
+.card-glass {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md shadow-lg hover:shadow-2xl transition will-change-transform;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF8833] to-[#CB7AE1];
+}
+
+/* Drift animation for floating icons */
+@keyframes drift {
+  0% { transform: translate(var(--x, 0), var(--y, 0)) rotate(0deg); }
+  50% { transform: translate(calc(var(--x, 0) + 20px), calc(var(--y, 0) - 15px)) rotate(6deg); }
+  100% { transform: translate(var(--x, 0), var(--y, 0)) rotate(0deg); }
+}
+
+.floating-icon {
+  animation: drift var(--t, 14s) ease-in-out infinite;
+  opacity: 0.12;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-icon {
+    animation: none;
+  }
+  .animate-float {
+    animation: none;
+  }
+  .animate-gradient {
+    animation: none;
+  }
+}

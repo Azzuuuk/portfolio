@@ -1,0 +1,122 @@
+:root {
+  /* Light mode colors */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 1rem;
+  
+  /* Custom accent colors */
+  --accent-1: 22 100% 60%; /* #FF8833 */
+  --accent-2: 285 63% 68%; /* #CB7AE1 */
+}
+
+.dark {
+  /* Dark mode colors - Azaan's professional theme */
+  --background: 222 47% 5%; /* #0b0d12 */
+  --foreground: 220 15% 91%; /* #e6e8eb */
+  --card: 220 35% 8%; /* #0f131a */
+  --card-foreground: 220 15% 91%;
+  --popover: 220 35% 8%;
+  --popover-foreground: 220 15% 91%;
+  --primary: 220 15% 91%;
+  --primary-foreground: 222 47% 5%;
+  --secondary: 220 20% 15%;
+  --secondary-foreground: 220 15% 91%;
+  --muted: 220 20% 15%;
+  --muted-foreground: 215 14% 64%; /* #9aa4b2 */
+  --accent: 22 100% 60%;
+  --accent-foreground: 220 15% 91%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 220 15% 91%;
+  --border: 220 20% 15%;
+  --input: 220 20% 15%;
+  --ring: 220 15% 91%;
+  
+  /* Custom accent colors (same in dark) */
+  --accent-1: 22 100% 60%; /* #FF8833 */
+  --accent-2: 285 63% 68%; /* #CB7AE1 */
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Gradient utility */
+.gradient-accent {
+  background: linear-gradient(135deg, hsl(var(--accent-1)) 0%, hsl(var(--accent-2)) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--accent-1)) 0%, hsl(var(--accent-2)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+html.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Animated gradient background */
+.animated-gradient-bg {
+  background: linear-gradient(-45deg, #0B0D12, #141824, #1a1a2e, #2d1b3d);
+  background-size: 300% 300%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-ring;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-accent/20 text-foreground;
+}
