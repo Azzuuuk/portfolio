@@ -1,8 +1,8 @@
 import { SiteMetadata } from './types'
 
 export const siteMetadata: SiteMetadata = {
-  title: 'Azaan Khan — Venture, Strategy & Product',
-  description: 'Founder/operator with hands-on experience across strategy (Mars, Deloitte), partnerships (Wellhub), and product/ops—building and scaling ventures like Blyza Entertainment. Open to Venture Analyst / Strategy / Innovation roles.',
+  title: 'Azaan Khan - Venture, Strategy & Operations',
+  description: 'Operator with hands-on experience across strategy (Mars, Deloitte), partnerships (Wellhub), and operations. Building and scaling ventures like Blyza Entertainment. Open to Venture, Strategy, and Operations roles.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://azaankhan.com',
   author: {
     name: 'Azaan Khan',
