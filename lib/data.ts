@@ -8,13 +8,13 @@ export const experiences: Experience[] = [
     location: 'Madrid, Spain (Germany Market)',
     dateRange: 'May 2025 - Nov 2025',
     bullets: [
-      'Expanded B2B partnerships in DE market, onboarding 15+ wellness brands and increasing partner conversion by 18%',
-      'Built automated CRM workflows that cut manual partner reporting time by 30%',
-      'Ran competitive and market analysis that informed a regional growth strategy driving 12% higher acquisition',
+      'Supported expansion of B2B partnerships in the DE market by managing outreach, partner coordination, and onboarding activities',
+      'Implemented CRM workflow improvements to make partner tracking and reporting more consistent',
+      'Conducted market and competitor analysis to support regional partnership planning and growth efforts',
     ],
     keyImpact: [
-      'Automated partner workflows, saving 10+ hrs/week in manual ops',
-      'Scaled partnership pipeline by 3x through structured outreach systems'
+      'Improved partnership execution through more structured outreach, tracking, and follow-up processes',
+      'Contributed to growth efforts by combining partner support with systems-focused process improvements'
     ],
     logo: '/logos/wellhub.png',
     tags: ['Partnerships', 'Growth'],
@@ -27,13 +27,13 @@ export const experiences: Experience[] = [
     location: 'Dubai, UAE',
     dateRange: 'Jul 2024 - Dec 2024',
     bullets: [
-      'Built KPI dashboards (Power BI) tracking sales and digital performance across 4 Gulf markets',
-      'Delivered category segmentation analysis that shaped a $2M+ portfolio strategy',
-      'Created scalable reporting frameworks adopted by 3 regional teams, reducing reporting cycles by 40%',
+      'Built KPI dashboards in Power BI to track sales and digital performance across 4 Gulf markets',
+      'Prepared category and performance analysis to support portfolio reviews and GTM planning',
+      'Helped standardize reporting frameworks across regional teams to improve visibility and consistency',
     ],
     keyImpact: [
-      'Reduced reporting cycle time by 40% through automated dashboards',
-      'Insights directly influenced $2M+ GTM allocation decisions'
+      'Improved decision support through clearer dashboards, reporting structures, and performance tracking',
+      'Contributed to strategy discussions through structured analysis and reporting insights'
     ],
     logo: '/logos/mars.png',
     tags: ['Strategy', 'Analytics'],
@@ -46,13 +46,13 @@ export const experiences: Experience[] = [
     location: 'Sharjah, UAE',
     dateRange: 'Sep 2023 - Jan 2024',
     bullets: [
-      'Built automated reporting pipelines (Power BI, SQL) improving data accuracy by 25%',
-      'Supported digital transformation initiatives across 2 client engagements',
-      'Delivered benchmarking analysis that informed process optimization recommendations',
+      'Built reporting pipelines in Power BI and SQL to improve data organization and reporting quality',
+      'Supported client workstreams by preparing analysis, documentation, and reporting inputs for project teams',
+      'Delivered benchmarking and process analysis that informed operational improvement recommendations',
     ],
     keyImpact: [
-      'Improved data reliability by 25% through automated pipelines',
-      'Contributed to process optimization across multiple client projects'
+      'Strengthened reporting reliability through structured data preparation and analysis support',
+      'Contributed to process optimization work through benchmarking, reporting, and problem-solving'
     ],
     logo: '/logos/deloitte.png',
     tags: ['Consulting', 'Process Design'],
@@ -65,16 +65,16 @@ export const experiences: Experience[] = [
     location: 'Dubai, UAE',
     dateRange: 'Feb 2024 - Apr 2024',
     bullets: [
-      'Implemented APQC process frameworks across Finance, HR, and Legal, reducing process gaps by 30%',
-      'Automated CRM/ERP workflows that cut manual data entry by 50%',
-      'Designed gamified onboarding system, increasing new-hire completion rates by 35%',
+      'Implemented APQC process frameworks across Finance, HR, and Legal to improve process clarity and alignment',
+      'Supported CRM and ERP workflow improvements to streamline internal operations and data handling',
+      'Designed a structured onboarding system to improve the new-hire experience and completion flow',
     ],
     keyImpact: [
-      'Cut manual data entry by 50% through CRM/ERP automation',
-      'Increased onboarding completion by 35% with gamified systems'
+      'Improved process consistency through workflow standardization across core business functions',
+      'Helped strengthen onboarding and internal systems through more structured operational design'
     ],
     logo: '/logos/digital-qatalyst.jpeg',
-    tags: ['Automation', 'Process Design'],
+    tags: ['Operations', 'Process Design'],
     type: 'Tech',
   },
   {
@@ -84,12 +84,12 @@ export const experiences: Experience[] = [
     location: 'Dubai, UAE',
     dateRange: 'Aug 2022 - Mar 2023',
     bullets: [
-      'Monitored client KPIs with 95% accuracy, identifying and resolving operational shortfalls',
-      'Automated monthly reporting using Power BI, cutting manual effort by 20%',
-      'Delivered insights that improved decision-making for MedCare and Majid Al Futtaim accounts',
+      'Monitored client KPIs and flagged operational gaps for follow-up with internal teams',
+      'Supported monthly Power BI reporting to improve visibility across account performance',
+      'Prepared reporting insights for client accounts including MedCare and Majid Al Futtaim',
     ],
     keyImpact: [
-      'Reduced manual reporting time by 20% with Power BI automation',
+      'Supported more consistent operational reporting and account tracking through regular dashboard updates',
     ],
     logo: '/logos/teleperformance.png',
     tags: ['Operations', 'Analytics'],
@@ -102,11 +102,11 @@ export const experiences: Experience[] = [
     location: 'Dubai, UAE',
     dateRange: 'Jun 2021 - Aug 2021',
     bullets: [
-      'Built HR and accounting modules using Python, Java, and C',
-      'Resolved B2B payment process bottlenecks through custom software solutions',
+      'Supported development of internal HR and accounting modules using Python, Java, and C',
+      'Assisted with custom software solutions for client payment and business process needs',
     ],
     keyImpact: [
-      'Delivered custom payment solutions for B2B clients',
+      'Contributed to client-facing software work by supporting practical business process solutions',
     ],
     logo: '/logos/facts.jpeg',
     tags: ['Development', 'B2B'],
@@ -121,18 +121,18 @@ export const ventures: Venture[] = [
     role: 'Founder & CEO',
     badge: 'Founder',
     status: 'Live',
-    summary: 'Built an entertainment ecosystem across gaming and real-world experiences with three verticals: PlayBlyza.com (Live), Blyza Live (In development), and Jeggy (R&D).',
-    description: 'Multi-vertical ecosystem: PlayBlyza.com (online party games), Blyza Live (TV-style game-show venue), Jeggy (B2B team-building SaaS)',
-    tags: ['EntertainmentTech', 'SaaS', 'Gaming', 'Events'],
+    summary: 'Building an entertainment ecosystem across digital and real-world experiences.',
+    description: 'Parent company spanning PlayBlyza and Jeggy, focused on consumer engagement and scalable product ecosystems.',
+    tags: ['EntertainmentTech', 'Gaming', 'SaaS'],
     highlights: [
-      { label: 'Scale', value: '50,000+ games played across 90+ countries on PlayBlyza.' },
+      { label: 'Scale', value: '50,000+ users across 90+ countries on PlayBlyza.' },
       { label: 'Tech', value: 'React/Next.js, Firebase/Firestore, Vercel, custom APIs.' },
-      { label: 'Roadmap', value: 'Blyza Live (In development), Jeggy (R&D) - B2B team-building SaaS.' },
       { label: 'Business Model', value: 'B2C subscriptions + B2B licensing + events + sponsorships.' },
     ],
     links: {
       caseStudy: '/case-studies/blyza',
       website: 'https://joinblyza.com',
+      demo: 'https://jeggy.app',
     },
     logo: '/logos/blyza.png',
     year: '2025 - Present',
@@ -143,8 +143,7 @@ export const ventures: Venture[] = [
     ],
     verticalStatuses: [
       { name: 'PlayBlyza', status: 'Live' },
-      { name: 'Blyza Live', status: 'In development' },
-      { name: 'Jeggy', status: 'R&D' },
+      { name: 'Jeggy', status: 'Live' },
     ],
   },
   {
@@ -217,11 +216,11 @@ export const ventures: Venture[] = [
     id: 'layl',
     name: 'LAYL',
     role: 'Founder (Concept)',
-    badge: 'R&D',
-    status: 'R&D',
+    badge: 'Support',
+    status: 'Paused',
     summary: 'Tourism & media discovery concept for Dubai (paused pre-launch).',
     description: 'Tourism & media discovery app for Dubai (paused pre-launch)',
-    tags: ['Tourism', 'Media', 'R&D'],
+    tags: ['Tourism', 'Media', 'Concept'],
     highlights: [
       { label: 'Research', value: 'Market and user research to identify discovery gaps.' },
       { label: 'Prototype', value: 'Prototype exploration for content + local experiences.' },

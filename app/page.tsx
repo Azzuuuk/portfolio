@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowRight, Mail, Linkedin, Phone, ExternalLink, Sparkles, Briefcase, Code2, Gamepad2, Lightbulb, Rocket, LineChart, Camera, Dumbbell, Users } from 'lucide-react'
+import { ArrowRight, Mail, Linkedin, Phone, ExternalLink, Sparkles, Briefcase, Code2, Gamepad2, Lightbulb, Rocket, LineChart, Camera, Dumbbell, Users, TrendingUp, Layers3, Cpu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -49,6 +49,7 @@ const skills = {
     'Process optimization',
     'Market & competitive analysis',
     'Revenue operations',
+    'Marketing strategy',
   ],
   'Tech & Tools': [
     'React / Next.js',
@@ -56,6 +57,10 @@ const skills = {
     'SQL / data pipelines',
     'APIs & webhooks',
     'Vercel / CI/CD',
+    'Video content creation',
+    'Video editing',
+    'Communication',
+    'Public speaking',
   ],
 }
 
@@ -125,13 +130,18 @@ export default function HomePage() {
                   Azaan Khan
                 </h1>
                 <p className="text-xl md:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FF8833] to-[#CB7AE1]">
-                  Building Systems That Scale Revenue and Operations
+                  Building Ventures, Systems, and Scalable Growth
                 </p>
               </div>
 
-              <p className="text-neutral-300 text-lg leading-relaxed max-w-2xl">
-                I build systems across partnerships, operations, and growth, combining automation, data, and execution to improve efficiency and drive scalable outcomes.
-              </p>
+              <div className="space-y-4 max-w-2xl">
+                <p className="text-neutral-300 text-lg leading-relaxed">
+                  I operate at the intersection of strategy, operations, and technology - building ventures, optimizing systems, and driving growth through data, execution, and AI.
+                </p>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  With experience across global markets and early-stage startups, I focus on turning ideas into scalable outcomes.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
@@ -187,24 +197,24 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: 'Automation & Systems Design',
-                description: 'Designing automation workflows using APIs, LLMs, and tools like n8n and Zapier to eliminate manual work and improve execution speed across sales and operations.',
-                icon: '⚙️'
+                title: 'AI & Systems',
+                description: 'Leveraging AI, automation, and APIs to enhance workflows, reduce manual effort, and unlock scalable leverage.',
+                icon: Cpu
               },
               {
-                title: 'Operations & Process Optimization',
-                description: 'Identifying bottlenecks and building scalable processes that reduce cycle times, improve data accuracy, and free teams to focus on high-leverage work.',
-                icon: '📊'
+                title: 'Project Management & Execution',
+                description: 'Driving cross-functional projects from planning to delivery with clear ownership, timelines, and measurable outcomes.',
+                icon: Layers3
               },
               {
-                title: 'Venture Building & Scaling',
-                description: 'Taking products from zero to traction across gaming, SaaS, and events. 50,000+ games played on PlayBlyza across 90+ countries.',
-                icon: '🚀'
+                title: 'Venture Building',
+                description: 'Building and scaling products across gaming, SaaS, and events - from idea to traction and monetization.',
+                icon: Rocket
               },
               {
-                title: 'Strategy & GTM Execution',
-                description: 'Translating market analysis and competitive insights into structured go-to-market plans with measurable KPIs and clear execution milestones.',
-                icon: '🎯'
+                title: 'Strategy & Growth',
+                description: 'Driving market expansion, partnerships, and go-to-market execution through structured strategy and data-driven decision-making.',
+                icon: TrendingUp
               }
             ].map((item, idx) => (
               <motion.div
@@ -216,7 +226,9 @@ export default function HomePage() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="p-8 rounded-xl bg-neutral-900/60 border border-neutral-800/60 hover:border-[#FF8833]/30 transition-all group"
               >
-                <div className="text-3xl mb-4">{item.icon}</div>
+                <div className="mb-4 inline-flex w-10 h-10 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                  <item.icon className="w-5 h-5 text-neutral-300 group-hover:text-[#FF8833] transition-colors" />
+                </div>
                 <h3 className="text-xl font-semibold text-neutral-100 mb-3 group-hover:text-[#FF8833] transition-colors">
                   {item.title}
                 </h3>
@@ -404,7 +416,7 @@ export default function HomePage() {
                   scale: 1.005,
                   transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
                 }}
-                className="relative overflow-hidden rounded-2xl bg-neutral-900/60 border border-[#FF8833]/20 p-8 md:p-12"
+                className="relative overflow-hidden rounded-2xl bg-neutral-900/60 border border-[#FF8833]/20 p-8 md:p-12 shadow-[0_12px_40px_-24px_rgba(0,0,0,0.8)]"
               >
                 {ventures[0].clickUrl && (
                   <ClickPill href={ventures[0].clickUrl} label={ventures[0].clickLabel} />
@@ -429,9 +441,6 @@ export default function HomePage() {
                           <Badge className="bg-[#FF8833]/15 text-[#FF8833] border border-[#FF8833]/25 text-xs">
                             Featured
                           </Badge>
-                          <Badge variant="outline" className="border-neutral-600 text-neutral-300 text-xs">
-                            {ventures[0].badge}
-                          </Badge>
                         </div>
                         <h3 className="text-2xl md:text-3xl font-bold gradient-text mb-1">
                           {ventures[0].name}
@@ -446,29 +455,35 @@ export default function HomePage() {
                       {ventures[0].summary}
                     </p>
 
-                    {ventures[0].verticalStatuses && ventures[0].verticalStatuses.length > 0 && (
-                      <div className="flex flex-wrap gap-2">
-                        {ventures[0].verticalStatuses.map((vertical) => (
-                          <span
-                            key={vertical.name}
-                            className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 font-medium"
-                          >
-                            {vertical.name}: <span className="text-[#FF8833]">{vertical.status}</span>
-                          </span>
-                        ))}
+                    <div className="grid gap-4">
+                      <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                        <div className="flex items-center justify-between gap-3 mb-2">
+                          <h4 className="text-sm font-semibold text-neutral-100">PlayBlyza</h4>
+                          <Badge variant="outline" className="border-emerald-500/30 text-emerald-300 text-[11px]">Live Product</Badge>
+                        </div>
+                        <p className="text-sm text-neutral-400 mb-2">
+                          Social party games platform designed for casual and multiplayer experiences.
+                        </p>
+                        <p className="text-xs text-neutral-300 mb-3">
+                          50,000+ users across 90+ countries
+                        </p>
+                        <Button size="sm" variant="outline" className="border-neutral-700 text-neutral-300 hover:text-[#FF8833] hover:border-[#FF8833]/40" asChild>
+                          <a href="https://playblyza.com" target="_blank" rel="noopener noreferrer">Visit PlayBlyza</a>
+                        </Button>
                       </div>
-                    )}
 
-                    <div className="flex flex-wrap gap-2">
-                      {ventures[0].tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="outline"
-                          className="border-[#FF8833]/30 text-neutral-300 text-xs"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
+                      <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                        <div className="flex items-center justify-between gap-3 mb-2">
+                          <h4 className="text-sm font-semibold text-neutral-100">Jeggy</h4>
+                          <Badge variant="outline" className="border-emerald-500/30 text-emerald-300 text-[11px]">Live Product</Badge>
+                        </div>
+                        <p className="text-sm text-neutral-400 mb-3">
+                          A social platform for gamers to track, rate, and discover games, inspired by Letterboxd.
+                        </p>
+                        <Button size="sm" variant="outline" className="border-neutral-700 text-neutral-300 hover:text-[#FF8833] hover:border-[#FF8833]/40" asChild>
+                          <a href="https://jeggy.app" target="_blank" rel="noopener noreferrer">Visit Jeggy</a>
+                        </Button>
+                      </div>
                     </div>
 
                     {ventures[0].links?.website && (
@@ -676,7 +691,7 @@ export default function HomePage() {
               <span className="text-sm font-semibold text-neutral-200">Capabilities</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-              Skills
+              Capabilities
             </h2>
             <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
               Tools and methods applied across real projects and outcomes
