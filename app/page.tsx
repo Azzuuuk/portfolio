@@ -36,37 +36,29 @@ const hoverLift = {
 }
 
 const skills = {
+  'AI & Automation': [
+    'n8n',
+    'Zapier',
+    'Prompt Engineering',
+    'AI Workflows',
+    'Automation Systems',
+    'Process Automation',
+  ],
   'Business & Strategy': [
-    'Venture Strategy',
     'Market Analysis',
-    'Business Development',
-    'Partnership Management',
+    'Partnerships',
     'Go-to-Market Strategy',
-    'KPI Dashboards',
+    'KPI Systems',
+    'Growth Strategy',
+    'Process Design',
   ],
   'Tech & Tools': [
     'React/Next.js',
     'Firebase',
     'Power BI',
     'SQL',
-    'CRM/ERP',
-    'Analytics',
-  ],
-  'AI & Innovation': [
-    'AI Strategy',
-    'Prompt Engineering',
-    'AI Product Development',
-    'Machine Learning Applications',
-    'AI-Powered Automation',
-    'Generative AI',
-  ],
-  'Creative & Leadership': [
-    'Team Building',
-    'Event Production',
-    'Content Strategy',
-    'Stakeholder Management',
-    'Process Optimization',
-    'Innovation',
+    'Zapier',
+    'APIs',
   ],
 }
 
@@ -115,72 +107,108 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 z-10"
+        className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-20 z-10"
       >
-        <div className="container mx-auto max-w-6xl">
+        <div className="absolute inset-0 -z-10 opacity-20">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-l from-[#FF8833]/30 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-40 left-10 w-80 h-80 bg-gradient-to-r from-[#CB7AE1]/30 blur-3xl rounded-full"></div>
+        </div>
+
+        <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial="hidden"
-            animate="show"
-            variants={stagger}
-            className="grid md:grid-cols-2 gap-12 items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 text-center"
           >
-            {/* Left: Headshot */}
-            <motion.div variants={fadeInUp} className="flex justify-center md:justify-end">
-              <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden animate-float shadow-2xl ring-4 ring-[#FF8833]/20">
-                  <Image
-                    src="/azaanimage.JPG"
-                    alt="Azaan Khan"
-                    width={320}
-                    height={320}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
-                </div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF8833] to-[#CB7AE1] opacity-20 blur-3xl -z-10" />
-              </div>
-            </motion.div>
-
-            {/* Right: Text content */}
-            <motion.div variants={fadeInUp} className="space-y-6 text-center md:text-left">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading">
-                <span className="gradient-text">Azaan Khan</span>
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-neutral-100 tracking-tight leading-tight">
+                Azaan Khan
               </h1>
-              
-              <p className="text-lg md:text-xl text-neutral-200 leading-relaxed">
-                I&apos;m Azaan Khan, a business innovation professional passionate about building and scaling ventures at the intersection of strategy, creativity, and technology. With hands-on experience across growth, partnerships, and digital transformation at companies like Mars, Deloitte, and Wellhub, I&apos;ve also founded Blyza Entertainment, a multi-vertical startup combining gaming, SaaS, and live experiences. My work blends entrepreneurial vision with data-driven execution, driven by one goal: to build impactful businesses and evolve into a world-class entrepreneur and venture operator.
+              <p className="text-2xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FF8833] via-[#CB7AE1] to-[#FF8833]">
+                AI-Driven Operator
               </p>
+            </div>
 
-              <p className="text-base md:text-lg italic text-neutral-400 border-l-4 border-[#FF8833] pl-4">
-                &quot;Be Unrealistic. Be Obsessed.&quot;
+            <div className="space-y-6 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-neutral-200 font-medium leading-relaxed">
+                Building Systems, Ventures, and Scalable Processes
               </p>
+              <p className="text-neutral-400 leading-relaxed">
+                I work at the intersection of business, technology, and automation. With experience across strategy, partnerships, and venture building, I focus on designing systems that improve efficiency, unlock growth, and scale operations using AI and modern tools.
+              </p>
+              <p className="text-neutral-400 leading-relaxed">
+                I have built and automated workflows using tools like n8n, Zapier, and AI models, applied across partnerships, sales processes, and internal operations.
+              </p>
+            </div>
 
-              <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#FF8833] to-[#CB7AE1] hover:opacity-90 text-white shadow-lg hover:shadow-2xl transition-all"
-                  asChild
-                >
-                  <a href="#experience">
-                    <Briefcase className="mr-2 h-5 w-5" />
-                    View Experience
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-neutral-600 hover:border-[#FF8833] backdrop-blur-md bg-white/5 hover:bg-white/10"
-                  asChild
-                >
-                  <a href="#ventures">
-                    <Sparkles className="mr-2 h-5 w-5" />
-                    Explore Ventures
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#FF8833] to-[#CB7AE1] hover:opacity-90 text-white transition-all"
+                asChild
+              >
+                <a href="#experience">View Experience</a>
+              </Button>
+              <Button
+                size="lg"
+                className="bg-neutral-900 border border-neutral-700 hover:border-[#FF8833] text-neutral-100 hover:text-[#FF8833] transition-all"
+                asChild
+              >
+                <a href="#ventures">View Ventures</a>
+              </Button>
+            </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* CORE FOCUS SECTION */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 z-10 bg-neutral-950/50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-100 mb-4">What I Do</h2>
+            <p className="text-neutral-400 text-lg">Four core areas where I create impact</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: 'AI & Automation Systems',
+                description: 'Designing and implementing workflows using AI tools, APIs, and automation platforms to reduce manual work and improve operational efficiency.',
+                icon: '⚙️'
+              },
+              {
+                title: 'Operations & Process Optimization',
+                description: 'Improving internal systems across partnerships, reporting, and execution by identifying bottlenecks and building scalable processes.',
+                icon: '📊'
+              },
+              {
+                title: 'Venture Building',
+                description: 'Building and scaling products across gaming, SaaS, and digital platforms with a focus on growth, user experience, and monetization.',
+                icon: '🚀'
+              },
+              {
+                title: 'Strategy & Execution',
+                description: 'Combining analytical thinking with hands-on execution to turn ideas into structured, measurable outcomes.',
+                icon: '🎯'
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="p-8 rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 hover:border-[#FF8833]/50 transition-all group"
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-neutral-100 mb-3 group-hover:text-[#FF8833] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-neutral-400 leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -202,7 +230,7 @@ export default function HomePage() {
               Experience
             </h2>
             <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-              From strategy consulting to partnerships—hands-on execution across diverse markets
+              From strategy consulting to partnerships - hands-on execution across diverse markets
             </p>
           </motion.div>
 
@@ -251,7 +279,7 @@ export default function HomePage() {
                       </div>
                     </CardHeader>
                     <CardContent className="relative">
-                      <ul className="space-y-3">
+                      <ul className="space-y-3 mb-6">
                         {exp.bullets.map((bullet, i) => (
                           <li 
                             key={i} 
@@ -262,7 +290,22 @@ export default function HomePage() {
                           </li>
                         ))}
                       </ul>
-                      <div className="flex gap-2 flex-wrap mt-4">
+
+                      {exp.keyImpact && (
+                        <div className="mb-6 p-4 rounded-lg bg-neutral-800/50 border border-neutral-700/50">
+                          <p className="text-xs font-semibold text-[#FF8833] uppercase tracking-wider mb-2">Key Impact</p>
+                          <ul className="space-y-2">
+                            {exp.keyImpact.map((impact, i) => (
+                              <li key={i} className="text-sm text-neutral-300 flex items-start">
+                                <span className="mr-2 text-[#CB7AE1]">→</span>
+                                <span>{impact}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      
+                      <div className="flex gap-2 flex-wrap">
                         {exp.tags.map((tag) => (
                           <Badge
                             key={tag}
@@ -532,6 +575,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AI & AUTOMATION PROJECTS SECTION */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-100 mb-4">AI & Automation Projects</h2>
+            <p className="text-neutral-400 text-lg">Systems and workflows I&apos;ve built to improve efficiency</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Automated Outreach System',
+                description: 'Built using n8n and AI tools to automate messaging and responses, reducing manual effort in sales and partnership workflows.',
+                tags: ['n8n', 'AI', 'Sales']
+              },
+              {
+                title: 'AI Chatbot for Operations',
+                description: 'Internal communication chatbot using LLM tools to support customer and partnership responses with dynamic, contextual replies.',
+                tags: ['LLM', 'ChatGPT', 'Operations']
+              },
+              {
+                title: 'Process Automation Workflows',
+                description: 'Connected CRM, communication, and tracking systems to improve internal efficiency and reduce manual data entry.',
+                tags: ['Zapier', 'CRM', 'Automation']
+              }
+            ].map((project, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="p-8 rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 hover:border-[#FF8833]/50 transition-all group"
+              >
+                <h3 className="text-xl font-semibold text-neutral-100 mb-3 group-hover:text-[#FF8833] transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-neutral-400 leading-relaxed mb-6">{project.description}</p>
+                <div className="flex gap-2 flex-wrap">
+                  {project.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      className="bg-[#FF8833]/20 text-[#FF8833] border border-[#FF8833]/30 text-xs"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SKILLS SECTION */}
       <section id="skills" className="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
         <div className="container mx-auto max-w-6xl">
@@ -554,7 +651,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => (
               <ScrollRevealSkill key={category} index={index}>
                 <Card className="card-glass hover:border-[#FF8833]/50 transition-all duration-500 h-full group">
@@ -595,10 +692,10 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold gradient-text mb-6">
-              Let&apos;s Build Something Unreal
+              Let&apos;s Build Systems That Scale
             </h2>
             <p className="text-neutral-300 text-xl max-w-2xl mx-auto">
-              Open to building high-impact products, teams, and ecosystems across venture, strategy, and innovation.
+              Open to roles across venture, operations, and AI-driven execution.
             </p>
           </motion.div>
 

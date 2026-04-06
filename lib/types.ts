@@ -5,6 +5,7 @@ export interface Experience {
   location: string
   dateRange: string
   bullets: string[]
+  keyImpact?: string[]
   logo?: string
   tags: string[]
   type: 'Strategy' | 'Partnerships' | 'Tech' | 'Ops' | 'All'

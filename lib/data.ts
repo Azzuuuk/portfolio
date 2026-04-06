@@ -6,11 +6,15 @@ export const experiences: Experience[] = [
     company: 'Wellhub (Gympass)',
     role: 'Partnerships & Growth Associate',
     location: 'Madrid, Spain (Germany Market)',
-    dateRange: 'May 2025 – Nov 2025',
+    dateRange: 'May 2025 - Nov 2025',
     bullets: [
       'Led B2B partnership expansion in DE market; onboarded wellness brands, improved acquisition funnels',
       'Ran market & competitor analysis to inform regional growth strategies',
       'Used CRM/BI to optimize partner performance, retention, and ROI',
+    ],
+    keyImpact: [
+      'Reduced manual processes via automation',
+      'Built scalable partnership frameworks'
     ],
     logo: '/logos/wellhub.png',
     tags: ['Partnerships', 'Strategy'],
@@ -21,11 +25,15 @@ export const experiences: Experience[] = [
     company: 'Mars Wrigley',
     role: 'Strategy & Execution Associate',
     location: 'Dubai, UAE',
-    dateRange: 'Jul 2024 – Dec 2024',
+    dateRange: 'Jul 2024 - Dec 2024',
     bullets: [
       'Built KPI dashboards for sales/digital performance across Gulf markets',
       'Drove category insights and segmentation for strategy decisions',
       'Delivered scalable reporting & forecasting frameworks',
+    ],
+    keyImpact: [
+      'Designed scalable GTM processes',
+      'Built decision systems with dashboards'
     ],
     logo: '/logos/mars.png',
     tags: ['Strategy', 'Ops'],
@@ -36,11 +44,15 @@ export const experiences: Experience[] = [
     company: 'Deloitte',
     role: 'Business Process Solutions (Intern)',
     location: 'Sharjah, UAE',
-    dateRange: 'Sep 2023 – Jan 2024',
+    dateRange: 'Sep 2023 - Jan 2024',
     bullets: [
       'Built automated reporting (Power BI, SQL); improved data reliability',
       'Contributed to digital transformation and process optimization',
       'Supported due-diligence-style benchmarking & recommendations',
+    ],
+    keyImpact: [
+      'Implemented process optimizations',
+      'Built decision-supporting frameworks'
     ],
     logo: '/logos/deloitte.png',
     tags: ['Strategy', 'Tech'],
@@ -51,11 +63,15 @@ export const experiences: Experience[] = [
     company: 'Digital Qatalyst DMCC',
     role: 'Technology Analyst',
     location: 'Dubai, UAE',
-    dateRange: 'Feb 2024 – Apr 2024',
+    dateRange: 'Feb 2024 - Apr 2024',
     bullets: [
       'Implemented APQC process frameworks across Finance/HR/Legal',
       'Automated CRM/ERP workflows for scalability and accuracy',
       'Created gamified onboarding tools for adoption & L&D',
+    ],
+    keyImpact: [
+      'Streamlined cross-functional workflows',
+      'Built systems for enterprise adoption'
     ],
     logo: '/logos/digital-qatalyst.jpeg',
     tags: ['Tech', 'Ops'],
@@ -66,11 +82,15 @@ export const experiences: Experience[] = [
     company: 'Teleperformance',
     role: 'Operations Intern',
     location: 'Dubai, UAE',
-    dateRange: 'Aug 2022 – Mar 2023',
+    dateRange: 'Aug 2022 - Mar 2023',
     bullets: [
       'Monitored client KPIs to identify and resolve operational shortfalls with 95% accuracy',
       'Automated monthly reporting using Power BI, cutting manual time by 20%',
       'Delivered actionable insights that improved client decisions for MedCare and Majid Al Futtaim',
+    ],
+    keyImpact: [
+      'Automated client reporting reducing manual work',
+      'Delivered insights improving client outcomes'
     ],
     logo: '/logos/teleperformance.png',
     tags: ['Analytics', 'Operations'],
@@ -81,11 +101,15 @@ export const experiences: Experience[] = [
     company: 'Facts Computer House',
     role: 'Business Development Intern',
     location: 'Dubai, UAE',
-    dateRange: 'Jun 2021 – Aug 2021',
+    dateRange: 'Jun 2021 - Aug 2021',
     bullets: [
       'Supported HR and accounting software projects using Python, Java, and C',
       'Collaborated with marketing to create brand materials and social media campaigns',
       'Resolved B2B payment process challenges through customized software solutions',
+    ],
+    keyImpact: [
+      'Built software solutions for payment processes',
+      'Supported multi-technology development projects'
     ],
     logo: '/logos/facts.jpeg',
     tags: ['Tech', 'Sales'],
@@ -100,20 +124,20 @@ export const ventures: Venture[] = [
     role: 'Founder & CEO',
     badge: 'Founder',
     status: 'Live',
-    summary: 'Entertainment ecosystem with three verticals: PlayBlyza.com (Live), Blyza Live (In development), and Jeggy—AI B2B team-building (R&D).',
+    summary: 'Entertainment ecosystem with three verticals: PlayBlyza.com (Live), Blyza Live (In development), and Jeggy - AI B2B team-building (R&D).',
     description: 'Multi-vertical ecosystem: PlayBlyza.com (online party games), Blyza Live (TV-style game-show venue), Jeggy (AI B2B team-building SaaS)',
     tags: ['EntertainmentTech', 'B2C/B2B', 'SaaS', 'Gaming', 'Events'],
     highlights: [
       { label: 'Scale', value: '50,000+ games played across 90+ countries (PlayBlyza).' },
       { label: 'Tech', value: 'React/Next.js · Firebase/Firestore · Vercel.' },
-      { label: 'Roadmap', value: 'Blyza Live (In development), Jeggy (R&D)—B2B team-building SaaS.' },
+      { label: 'Roadmap', value: 'Blyza Live (In development), Jeggy (R&D) - B2B team-building SaaS.' },
     ],
     links: {
       caseStudy: '/case-studies/blyza',
       website: 'https://joinblyza.com',
     },
     logo: '/logos/blyza.png',
-    year: '2025 – Present',
+    year: '2025 - Present',
     images: [
       '/ventures/blyza/shot-1.jpg',
       '/ventures/blyza/shot-2.jpg',
@@ -140,7 +164,7 @@ export const ventures: Venture[] = [
       { label: 'Partnerships', value: 'Brand/sponsor collaborations for large-format events.' },
     ],
     logo: '/logos/fpp.png',
-    year: '2022 – 2024',
+    year: '2022 - 2024',
     images: [
       '/ventures/fpp/shot-1.jpg',
       '/ventures/fpp/shot-2.jpg',
@@ -184,7 +208,7 @@ export const ventures: Venture[] = [
       { label: 'Creative', value: 'Creative campaign assistance and client communications.' },
     ],
     logo: '/logos/paragon.jpg',
-    year: '2024 – Present',
+    year: '2024 - Present',
     images: [
       '/ventures/paragon/shot-1.jpg',
     ],
@@ -206,7 +230,7 @@ export const ventures: Venture[] = [
       { label: 'Status', value: 'Paused pre-launch; learnings inform future builds.' },
     ],
     logo: '/logos/layl.png',
-    year: '2023 – 2024',
+    year: '2023 - 2024',
     images: [
       '/ventures/layl/shot-1.jpg',
     ],
